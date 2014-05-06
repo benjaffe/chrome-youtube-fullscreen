@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "manifest_version": 2,
   "description": "This plugin adds a Full Screen link. When clicked, it opens just the video in the browser.",
-  "homepage_url": "",
+  "homepage_url": "http://benjaffe.me",
   "icons": {
     "16": "icons/icon16.png",
     "48": "icons/icon48.png",
