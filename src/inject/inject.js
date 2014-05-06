@@ -12,12 +12,6 @@ chrome.extension.sendMessage({}, function(response) {
             a.href = '#';
             a.class = 'pluginFullscreenBtn';
             a.appendChild(document.createTextNode('Full Screen'));
-            p.style.position = 'relative';
-            a.style.position = 'absolute';
-            a.style.bottom = '8px';
-            a.style.zIndex = '100000';
-            a.style.right = '0';
-            a.style.marginRight = '120px';
             p.appendChild(a);
             a.addEventListener('click', function(){
                 var urlBits = location.href.split('watch?v=');
