@@ -1,16 +1,7 @@
-.pluginFullscreenBtn {
-    position: absolute;
-    bottom: 7px;
-    z-index: 100000;
+/* overqualified to avoid being overridden by styles on page */
+.html5-player-chrome .ytp-button-standalone {
+    float: right;
+    padding: 7px 2px;
     color: #888;
 }
-.pluginFullscreenBtn:hover {color: #AAA;text-decoration:none;}
-
-.watch-small .pluginFullscreenBtn {left: 455px;}
-.watch-medium .pluginFullscreenBtn,
-.watch-large .pluginFullscreenBtn {right: 0;margin-right: 120px;}
-
-
-#player {
-    position:relative;
-}
+.ytp-button-standalone:hover {color: #AAA;text-decoration:none;}

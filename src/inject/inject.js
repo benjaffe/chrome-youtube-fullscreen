@@ -35,12 +35,12 @@ chrome.extension.sendMessage({}, function(response) {
 
 
         (function(){
-            var player = document.getElementById('player');
+            var player = document.querySelector('.html5-player-chrome');
 
             // make a button for fullscreenification
             var fullscreenBtn = document.createElement('a');
             fullscreenBtn.href = '#';
-            fullscreenBtn.classList.add('pluginFullscreenBtn');
+            fullscreenBtn.className = 'ytp-button ytp-button-standalone';
             fullscreenBtn.appendChild(document.createTextNode('Standalone'));
 
             // when you click, make it happen
