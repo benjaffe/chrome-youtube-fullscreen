@@ -1,8 +1,8 @@
 {
   "name": "YouTube Standalonify",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "manifest_version": 2,
-  "description": "Standalonification it opens only the video in the browser, so you can resize to your heart's content.",
+  "description": "Standalonification opens only the video in the browser, so you can resize to your heart's content.",
   "homepage_url": "http://benjaffe.me",
   "icons": {
     "16": "icons/icon16.png",
