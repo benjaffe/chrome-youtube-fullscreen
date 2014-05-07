@@ -1,10 +1,16 @@
 .pluginFullscreenBtn {
     position: absolute;
-    bottom: 8px;
+    bottom: 7px;
     z-index: 100000;
-    right: 0;
-    margin-right: 120px;
+    color: #888;
 }
+.pluginFullscreenBtn:hover {color: #AAA;text-decoration:none;}
+
+.watch-small .pluginFullscreenBtn {left: 450px;}
+.watch-medium .pluginFullscreenBtn,
+.watch-large .pluginFullscreenBtn {right: 0;margin-right: 120px;}
+
+
 #player {
     position:relative;
 }
