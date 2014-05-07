@@ -66,11 +66,25 @@ chrome.extension.sendMessage({}, function(response) {
 
                 var timeStr = padNum(hours, 2) + padNum(minutes, 2) + padNum(seconds, 2);
                 console.log(timeStr);
-                // chop up the url
-                var urlBits = location.href.split('watch?v=');
 
-                // put it back together
-                location.href = urlBits[0] + 'embed/' + urlBits[1].split('#')[0] + '?start=' + timeStr + '&autoplay=1';
+                // reform the url
+                var location = window.location;
+
+                var urlBits = location.search.slice(1).split('&');
+                urlBits.push( ('start=' + timeStr), ('autoplay=1') );
+
+                // find the v url parameter (the video id)
+                for (i=0; urlBits[i].split('=')[0] !== 'v'; i++) {}
+
+                // get the video id while removing it from the array of parameters
+                var videoIdParameter = urlBits.splice(i,1)[0];
+                var videoId = videoIdParameter.split('v=')[1];
+
+                // form the new url
+                var newUrl = location.origin + '/embed/' + videoId + '?' + urlBits.join('&') + location.hash;
+
+                // GO!
+                location.href = newUrl;
             });
         };
 
