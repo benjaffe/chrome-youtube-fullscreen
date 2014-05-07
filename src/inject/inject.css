@@ -6,7 +6,7 @@
 }
 .pluginFullscreenBtn:hover {color: #AAA;text-decoration:none;}
 
-.watch-small .pluginFullscreenBtn {left: 450px;}
+.watch-small .pluginFullscreenBtn {left: 455px;}
 .watch-medium .pluginFullscreenBtn,
 .watch-large .pluginFullscreenBtn {right: 0;margin-right: 120px;}
 

@@ -41,7 +41,7 @@ chrome.extension.sendMessage({}, function(response) {
             var fullscreenBtn = document.createElement('a');
             fullscreenBtn.href = '#';
             fullscreenBtn.classList.add('pluginFullscreenBtn');
-            fullscreenBtn.appendChild(document.createTextNode('Full Screen'));
+            fullscreenBtn.appendChild(document.createTextNode('Standalone'));
 
             // when you click, make it happen
             fullscreenBtn.addEventListener('click', function(){
