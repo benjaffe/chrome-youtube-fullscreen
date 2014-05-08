@@ -90,7 +90,7 @@ chrome.extension.sendMessage({}, function(response) {
 
 
 
-        (function(){
+        ;(function(){
             var player = document.querySelector('.html5-player-chrome');
 
             // make a button for standalonification
