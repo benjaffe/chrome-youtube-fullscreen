@@ -41,7 +41,7 @@ chrome.extension.sendMessage({}, function(response) {
             // run code as if it's on the native page, since chrome extensions
             // have limited access to page objects and methods
             runAsPage(function(){
-                var seconds, totalSeconds, minutes, totalMinutes, hours, totalHours, timeStr;
+                var timeStr, totalSeconds;//, seconds, minutes, totalMinutes, hours, totalHours;
                 var location = window.location;
                 var urlBits, videoIdParameter, videoId, newUrl;
 
@@ -61,14 +61,15 @@ chrome.extension.sendMessage({}, function(response) {
                 totalSeconds = Math.floor(totalSeconds);
 
                 // convert the time into youtube's format (eg. 132 is 1m 32s)
-                seconds = totalSeconds % 60;
-                totalMinutes = ((totalSeconds - seconds) / 60);
-                minutes = totalMinutes % 60;
-                totalHours = ((totalMinutes - minutes) / 60);
-                hours = totalHours % 60;
+                // seconds = totalSeconds % 60;
+                // totalMinutes = ((totalSeconds - seconds) / 60);
+                // minutes = totalMinutes % 60;
+                // totalHours = ((totalMinutes - minutes) / 60);
+                // hours = totalHours % 60;
 
-                timeStr = padNum(hours, 2) + padNum(minutes, 2) + padNum(seconds, 2);
-                console.log(timeStr);
+                // timeStr = padNum(hours, 2) + padNum(minutes, 2) + padNum(seconds, 2);
+                // console.log(timeStr);
+                timeStr = String(totalSeconds);
 
                 // reform the url
                 urlBits = location.search.slice(1).split('&');
