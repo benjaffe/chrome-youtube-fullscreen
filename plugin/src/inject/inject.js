@@ -46,13 +46,13 @@ chrome.extension.sendMessage({}, function(response) {
                 var urlBits, videoIdParameter, videoId, newUrl;
 
                 // padNum adds leading zeros. It's in here so it's accessible in the page's memory space
-                var padNum = function(num, digits) {
-                    var numStr = num.toString();
-                    while (numStr.length < digits) {
-                        numStr = '0' + numStr;
-                    }
-                    return numStr;
-                };
+                // var padNum = function(num, digits) {
+                //     var numStr = num.toString();
+                //     while (numStr.length < digits) {
+                //         numStr = '0' + numStr;
+                //     }
+                //     return numStr;
+                // };
 
                 // get the current time of the video (only works when run in the page's memory space)
                 totalSeconds = document.getElementById('movie_player').getCurrentTime();
